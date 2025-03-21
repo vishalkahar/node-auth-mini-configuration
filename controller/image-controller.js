@@ -1,8 +1,8 @@
 
-const { uploadToCloudinary } = require('../helpers/cloudinary-helper');
-const Image = require('../models/Image');
-const fs = require('fs');
-const cloudinary = require('../config/couldinary');
+import { uploadToCloudinary } from '../helpers/cloudinary-helper.js';
+import Image from '../models/Image.js';
+import fs from 'fs';
+import cloudinary from '../config/couldinary.js';
 
 const uploadImageController = async (req, res) => {
     try {

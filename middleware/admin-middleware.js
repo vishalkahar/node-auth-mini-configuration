@@ -8,4 +8,4 @@ const isAdminUser = (req, res, next) => {
     next();
 };
 
-module.exports = isAdminUser;
+export default isAdminUser;
