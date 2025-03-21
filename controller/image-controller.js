@@ -1,4 +1,3 @@
-
 import { uploadToCloudinary } from '../helpers/cloudinary-helper.js';
 import Image from '../models/Image.js';
 import fs from 'fs';
@@ -109,7 +108,7 @@ const deleteImageController = async (req, res) => {
     }
 }
 
-module.exports = {
+export {
     uploadImageController,
     fetchImagesController,
     deleteImageController,
