@@ -1,12 +1,14 @@
-require('dotenv').config();
-const express = require('express');
+import 'dotenv/config';
+import express from 'express';
+import connectDB from './database/db.js';
+import authRoutes from './routes/auth-routes.js';
+import homeRoutes from './routes/home-routes.js';
+import adminRoutes from './routes/admin-routes.js';
+import imageRoutes from './routes/image-routes.js';
+
 const app = express();
 const port = process.env.PORT || 3000;
-const connectDB = require('./database/db');
-const authRoutes = require('./routes/auth-routes');
-const homeRoutes = require('./routes/home-routes');
-const adminRoutes = require('./routes/admin-routes');
-const imageRoutes = require('./routes/image-routes');
+
 connectDB();
 
 app.use(express.json());
